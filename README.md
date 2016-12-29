@@ -12,8 +12,11 @@ Execute o script perl com os paramentros IMPRESSORA PORTA CHARCUTTER LOGS (explo
 ou windows_server_impressao LPT1 9000 119 ON 
 
 IMPRESSORA= LPT1,/dev/l0 etc
+
 PORTA = porta de cominicacao websocket
+
 CHARCUTTER= caracter de corte de papel depende de cada impressora
+
 LOGS= se imprime/mostra log no terminal.
 
 codigo WEBSOCKET no navegador:
