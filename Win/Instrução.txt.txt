@@ -1,0 +1,6 @@
+instalar servico
+nssm install NOMESERVICO
+
+
+windows_server_impressao IMPRESSORA PORTA CHARCUTTER LOGS
+windows_server_impressao /dev/diebold 9000 119(diabold) OFF
