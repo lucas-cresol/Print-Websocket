@@ -1,0 +1,12 @@
+Instruções
+
+1- as impressoras devem ser configuradas nas permissoes atraves do arquivo /etc/udev/rules.d/70-persistent-usb.rules
+//conteudo
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="03f4", ATTRS{idProduct}=="*", MODE=="0777", SYMLINK+="diebold"
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="0b1b", ATTRS{idProduct}=="*", MODE=="0777", SYMLINK+="bematech"
+//
+
+2- condigurar o arquivo .pl para a impressora conectada (/dev/diebold) ou (/dev/bematech)
+
+3- colocado no cron o arquivo .sh para que seja verificadado a cada minuto para ver se esta ativo o servidor de impressao
+*  *	* * *   root	sh /opt/socket/socketimpressao.sh >> /opt/socket/socket.log & 2>&1
